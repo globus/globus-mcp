@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[codz]
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Environments
+.env
+.envrc
+.venv
+
+# mypy
+.mypy_cache/
+
+# Tests
+.coverage
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store

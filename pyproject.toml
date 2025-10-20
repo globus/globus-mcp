@@ -1,0 +1,55 @@
+[project]
+name = "globus-mcp"
+version = "0.1.0"
+description = "Globus MCP server"
+keywords = ["globus", "mcp", "llm"]
+license = "Apache-2.0"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [{ name = "Globus", email = "support@globus.org" }]
+dependencies = [
+    "globus-compute-sdk>=3.16.1,<4.0.0",
+    "globus-sdk>=3.65.0,<4.0.0",
+    "mcp[cli]>=1.16.0,<2.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.18.2",
+    "pytest>=8.4.2",
+    "pytest-asyncio>=1.2.0",
+    "pytest-cov>=7.0.0",
+    "ruff>=0.14.0,<0.15.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+globus-mcp = "globus_mcp.server:main"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4", # flake8-comprehensions
+    "UP", # pyupgrade
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["globus_mcp", "tests"]
+
+[tool.mypy]
+strict = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_incomplete_defs = false
+disallow_untyped_defs = false
