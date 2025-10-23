@@ -107,7 +107,7 @@ def globus_transfer_list_endpoints_and_collections(
 def globus_transfer_search_endpoints_and_collections(
     filter_fulltext: Annotated[
         str,
-        Field(ge=1, description=("String to match endpoint fields against.")),
+        Field(min_length=1, description=("String to match endpoint fields against.")),
     ],
     limit: Annotated[
         int, Field(default=100, le=100, description="Maximum number of results to return.")
