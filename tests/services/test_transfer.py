@@ -6,8 +6,8 @@ from unittest.mock import MagicMock, Mock, patch
 
 import pytest
 from globus_sdk import GlobusAPIError, IterableTransferResponse, TransferClient, TransferData
-from mcp.server.fastmcp import FastMCP
-from mcp.server.fastmcp.exceptions import ToolError
+from mcp.server.mcpserver import MCPServer
+from mcp.server.mcpserver.exceptions import ToolError
 
 from globus_mcp.context import GlobusContext
 from globus_mcp.server import service_registry
@@ -52,7 +52,7 @@ def test_transfer_in_service_registry():
 
 
 def test_register_transfer():
-    mcp = Mock(spec=FastMCP)
+    mcp = Mock(spec=MCPServer)
     register_transfer(mcp)
     registered = [c[0][0] for c in mcp.add_tool.call_args_list]
     for tool in ALL_TRANSFER_TOOLS:

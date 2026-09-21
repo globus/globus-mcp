@@ -3,9 +3,8 @@ from http import HTTPStatus
 from typing import Annotated, Any, Literal
 
 import globus_sdk
-from mcp.server.fastmcp import Context
-from mcp.server.fastmcp.exceptions import ToolError
-from mcp.server.session import ServerSession
+from mcp.server.mcpserver import Context
+from mcp.server.mcpserver.exceptions import ToolError
 from pydantic import Field
 
 from globus_mcp.context import GlobusContext
@@ -84,7 +83,7 @@ def globus_transfer_list_endpoints_and_collections(
     limit: Annotated[int, Field(le=100, description="Maximum number of results to return.")] = 100,
     offset: Annotated[int, Field(description="Zero based offset into the result set.")] = 0,
     *,
-    ctx: Context[ServerSession, GlobusContext],
+    ctx: Context[GlobusContext],
 ) -> TransferEndpointList:
     """List Globus Transfer endpoints and collections that the user has access to, filtered based
     on the provided scope.
@@ -111,7 +110,7 @@ def globus_transfer_search_endpoints_and_collections(
     limit: Annotated[int, Field(le=100, description="Maximum number of results to return.")] = 100,
     offset: Annotated[int, Field(description="Zero based offset into the result set.")] = 0,
     *,
-    ctx: Context[ServerSession, GlobusContext],
+    ctx: Context[GlobusContext],
 ) -> TransferEndpointList:
     """Use a filter string to search all Globus Transfer endpoints and collections that
     are visible to the user.
@@ -148,7 +147,7 @@ def globus_transfer_submit_task(
         Field(description="Label for the transfer task"),
     ] = "Globus MCP Transfer",
     *,
-    ctx: Context[ServerSession, GlobusContext],
+    ctx: Context[GlobusContext],
 ) -> TransferSubmitResponse:
     """Submit a transfer task between two Globus Transfer collections.
 
@@ -178,7 +177,7 @@ def globus_transfer_get_task_events(
     ] = 10,
     offset: Annotated[int, Field(description="Zero based offset into the result set.")] = 0,
     *,
-    ctx: Context[ServerSession, GlobusContext],
+    ctx: Context[GlobusContext],
 ) -> TransferEventList:
     """Get a list of Globus Transfer task events to monitor the status and progress of a task.
     The events are ordered by time descending (newest first).
@@ -212,7 +211,7 @@ def globus_transfer_list_directory(
     ] = 100,
     offset: Annotated[int, Field(description="Zero based offset into the result set.")] = 0,
     *,
-    ctx: Context[ServerSession, GlobusContext],
+    ctx: Context[GlobusContext],
 ) -> TransferFileList:
     """List contents of a directory on a Globus Transfer collection"""
     client = get_transfer_client(ctx)

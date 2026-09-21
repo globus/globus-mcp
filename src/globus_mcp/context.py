@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 from globus_compute_sdk import Client
 from globus_sdk import GlobusApp, TransferClient
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer
 
 from globus_mcp.auth import get_globus_app
 
@@ -17,7 +17,7 @@ class GlobusContext:
 
 
 @asynccontextmanager
-async def lifespan(server: FastMCP) -> AsyncIterator[GlobusContext]:
+async def lifespan(server: MCPServer[GlobusContext]) -> AsyncIterator[GlobusContext]:
     try:
         app = get_globus_app()
         yield GlobusContext(app=app)

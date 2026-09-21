@@ -1,12 +1,12 @@
 import argparse
 
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer
 
 from globus_mcp.context import lifespan
 from globus_mcp.services.compute.registry import register_compute
 from globus_mcp.services.transfer.registry import register_transfer
 
-mcp = FastMCP("Globus MCP Server", lifespan=lifespan)
+mcp = MCPServer("Globus MCP Server", lifespan=lifespan)
 
 
 service_registry = {

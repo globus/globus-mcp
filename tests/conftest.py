@@ -1,7 +1,7 @@
 from unittest.mock import Mock
 
 import pytest
-from mcp.server.fastmcp import Context
+from mcp.server.mcpserver import Context
 
 from globus_mcp.context import GlobusContext
 
