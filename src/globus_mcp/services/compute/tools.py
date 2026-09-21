@@ -23,7 +23,6 @@ def globus_compute_list_endpoints(
     role: Annotated[
         Literal["any", "owner"],
         Field(
-            default="any",
             description=(
                 "Filter returned list by the user's association to endpoints."
                 " Specify 'any' (default) to return all endpoints that the user"
@@ -31,7 +30,8 @@ def globus_compute_list_endpoints(
                 " that the user owns."
             ),
         ),
-    ],
+    ] = "any",
+    *,
     ctx: Context[ServerSession, GlobusContext],
 ) -> list[ComputeEndpoint]:
     """List Globus Compute endpoints that the user has access to."""
@@ -60,15 +60,13 @@ def globus_compute_register_python_function(
     function_name: Annotated[str, Field(description="The name of the Python function")],
     description: Annotated[
         str | None,
-        Field(default=None, description="An optional description of the Python function"),
-    ],
+        Field(description="An optional description of the Python function"),
+    ] = None,
     public: Annotated[
         bool,
-        Field(
-            description="Indicates whether the Python function can be used by others",
-            default=False,
-        ),
-    ],
+        Field(description="Indicates whether the Python function can be used by others"),
+    ] = False,
+    *,
     ctx: Context[ServerSession, GlobusContext],
 ) -> ComputeFunctionRegisterResponse:
     """Register a Python function with Globus Compute.
@@ -127,19 +125,17 @@ def globus_compute_register_shell_command(
     ],
     timeout: Annotated[
         float | None,
-        Field(default=None, description="Maximum execution time in seconds."),
-    ],
+        Field(description="Maximum execution time in seconds."),
+    ] = None,
     description: Annotated[
         str | None,
-        Field(default=None, description="An optional description of the shell command"),
-    ],
+        Field(description="An optional description of the shell command"),
+    ] = None,
     public: Annotated[
         bool,
-        Field(
-            description="Indicates whether the shell command can be used by others",
-            default=False,
-        ),
-    ],
+        Field(description="Indicates whether the shell command can be used by others"),
+    ] = False,
+    *,
     ctx: Context[ServerSession, GlobusContext],
 ) -> ComputeFunctionRegisterResponse:
     """Register a shell command function with Globus Compute.
