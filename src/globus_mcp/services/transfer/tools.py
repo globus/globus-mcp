@@ -172,9 +172,7 @@ def globus_transfer_submit_task(
 
 def globus_transfer_get_task_events(
     task_id: Annotated[str, Field(description="ID of the task")],
-    limit: Annotated[
-        int, Field(le=1_000, description="Maximum number of results to return.")
-    ] = 10,
+    limit: Annotated[int, Field(le=1_000, description="Maximum number of results to return.")] = 10,
     offset: Annotated[int, Field(description="Zero based offset into the result set.")] = 0,
     *,
     ctx: Context[GlobusContext],

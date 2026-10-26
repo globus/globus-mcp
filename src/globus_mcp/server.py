@@ -24,7 +24,6 @@ mcp = MCPServer(
 )
 
 
-
 service_registry = {
     "compute": register_compute,
     "transfer": register_transfer,
