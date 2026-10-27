@@ -275,7 +275,9 @@ def test_globus_transfer_submit_task(mock_ctx: Mock, mock_client: Mock, mock_han
     assert res.task_id == task_id
 
 
-def test_globus_transfer_submit_task_api_error(mock_ctx: Mock, mock_handle_gare: Mock):
+def test_globus_transfer_submit_task_api_error(
+    mock_ctx: Mock, mock_client: Mock, mock_handle_gare: Mock
+):
     mock_handle_gare.side_effect = GlobusAPIError(r=MagicMock())
     with pytest.raises(ToolError, match="Failed to submit transfer"):
         globus_transfer_submit_task(

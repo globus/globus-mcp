@@ -10,6 +10,7 @@ from globus_mcp.context import GlobusContext
 def mock_app():
     app = Mock()
     app.config.environment = "sandbox"
+    app.get_client_retry_checks.return_value = []
     return app
 
 
