@@ -2,7 +2,7 @@ from unittest.mock import Mock, patch
 
 import pytest
 from globus_sdk import UserApp
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer
 
 from globus_mcp.context import GlobusContext, lifespan
 
@@ -10,7 +10,7 @@ from globus_mcp.context import GlobusContext, lifespan
 @pytest.mark.asyncio
 async def test_lifespan_yields_globus_context():
     mock_app = Mock(spec=UserApp)
-    mock_server = Mock(spec=FastMCP)
+    mock_server = Mock(spec=MCPServer)
 
     with patch("globus_mcp.context.get_globus_app", return_value=mock_app):
         async with lifespan(mock_server) as context:

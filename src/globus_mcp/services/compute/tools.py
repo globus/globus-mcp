@@ -4,9 +4,8 @@ from typing import Annotated, Any, Literal
 import globus_sdk
 from globus_compute_sdk.serialize import JSONData
 from globus_compute_sdk.serialize.facade import validate_strategylike
-from mcp.server.fastmcp import Context
-from mcp.server.fastmcp.exceptions import ToolError
-from mcp.server.session import ServerSession
+from mcp.server.mcpserver import Context
+from mcp.server.mcpserver.exceptions import ToolError
 from pydantic import Field
 
 from globus_mcp.context import GlobusContext
@@ -23,7 +22,6 @@ def globus_compute_list_endpoints(
     role: Annotated[
         Literal["any", "owner"],
         Field(
-            default="any",
             description=(
                 "Filter returned list by the user's association to endpoints."
                 " Specify 'any' (default) to return all endpoints that the user"
@@ -31,8 +29,9 @@ def globus_compute_list_endpoints(
                 " that the user owns."
             ),
         ),
-    ],
-    ctx: Context[ServerSession, GlobusContext],
+    ] = "any",
+    *,
+    ctx: Context[GlobusContext],
 ) -> list[ComputeEndpoint]:
     """List Globus Compute endpoints that the user has access to."""
     client = get_compute_client(ctx)
@@ -60,16 +59,14 @@ def globus_compute_register_python_function(
     function_name: Annotated[str, Field(description="The name of the Python function")],
     description: Annotated[
         str | None,
-        Field(default=None, description="An optional description of the Python function"),
-    ],
+        Field(description="An optional description of the Python function"),
+    ] = None,
     public: Annotated[
         bool,
-        Field(
-            description="Indicates whether the Python function can be used by others",
-            default=False,
-        ),
-    ],
-    ctx: Context[ServerSession, GlobusContext],
+        Field(description="Indicates whether the Python function can be used by others"),
+    ] = False,
+    *,
+    ctx: Context[GlobusContext],
 ) -> ComputeFunctionRegisterResponse:
     """Register a Python function with Globus Compute.
 
@@ -127,20 +124,18 @@ def globus_compute_register_shell_command(
     ],
     timeout: Annotated[
         float | None,
-        Field(default=None, description="Maximum execution time in seconds."),
-    ],
+        Field(description="Maximum execution time in seconds."),
+    ] = None,
     description: Annotated[
         str | None,
-        Field(default=None, description="An optional description of the shell command"),
-    ],
+        Field(description="An optional description of the shell command"),
+    ] = None,
     public: Annotated[
         bool,
-        Field(
-            description="Indicates whether the shell command can be used by others",
-            default=False,
-        ),
-    ],
-    ctx: Context[ServerSession, GlobusContext],
+        Field(description="Indicates whether the shell command can be used by others"),
+    ] = False,
+    *,
+    ctx: Context[GlobusContext],
 ) -> ComputeFunctionRegisterResponse:
     """Register a shell command function with Globus Compute.
 
@@ -178,7 +173,7 @@ def globus_compute_submit_task(
     function_kwargs: Annotated[
         dict[str, Any] | None, Field(description="Keyword arguments for the function")
     ],
-    ctx: Context[ServerSession, GlobusContext],
+    ctx: Context[GlobusContext],
 ) -> ComputeSubmitResponse:
     """Submit a function execution task to a Globus Compute endpoint.
 
@@ -200,7 +195,7 @@ def globus_compute_submit_task(
 
 def globus_compute_get_task_status(
     task_id: Annotated[str, Field(description="The ID of the task")],
-    ctx: Context[ServerSession, GlobusContext],
+    ctx: Context[GlobusContext],
 ) -> ComputeTask:
     """Retrieve the status and result of a Globus Compute task."""
     client = get_compute_client(ctx)

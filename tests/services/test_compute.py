@@ -10,8 +10,8 @@ from globus_compute_sdk.sdk.batch import Batch
 from globus_compute_sdk.serialize import JSONData, PureSourceTextInspect
 from globus_compute_sdk.serialize.facade import validate_strategylike
 from globus_sdk import GlobusAPIError
-from mcp.server.fastmcp import FastMCP
-from mcp.server.fastmcp.exceptions import ToolError
+from mcp.server.mcpserver import MCPServer
+from mcp.server.mcpserver.exceptions import ToolError
 
 from globus_mcp.context import GlobusContext
 from globus_mcp.server import service_registry
@@ -45,7 +45,7 @@ def test_compute_in_service_registry():
 
 
 def test_register_compute():
-    mcp = Mock(spec=FastMCP)
+    mcp = Mock(spec=MCPServer)
     register_compute(mcp)
     registered = [c[0][0] for c in mcp.add_tool.call_args_list]
     for tool in ALL_COMPUTE_TOOLS:

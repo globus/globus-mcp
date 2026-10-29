@@ -1,7 +1,7 @@
 from unittest.mock import Mock
 
 import pytest
-from mcp.server.fastmcp import Context
+from mcp.server.mcpserver import Context
 
 from globus_mcp.context import GlobusContext
 
@@ -10,6 +10,7 @@ from globus_mcp.context import GlobusContext
 def mock_app():
     app = Mock()
     app.config.environment = "sandbox"
+    app.get_client_retry_checks.return_value = []
     return app
 
 

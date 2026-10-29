@@ -1,12 +1,27 @@
 import argparse
+from importlib.metadata import version as _get_distribution_version
 
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer
 
 from globus_mcp.context import lifespan
 from globus_mcp.services.compute.registry import register_compute
 from globus_mcp.services.transfer.registry import register_transfer
 
-mcp = FastMCP("Globus MCP Server", lifespan=lifespan)
+SERVER_INSTRUCTIONS = """\
+Use the Globus data platform to move, discover, and analyze scientific datasets.
+
+NOTE: this MCP server only exposes the tools specified in server configuration. If you need a \
+feature that is not provided, ask the user to enable it. \
+NOTE: Globus Transfer collections may sometimes be referred to as "endpoints", "shares", \
+or "shared endpoints" for historical reasons."""
+
+mcp = MCPServer(
+    "Globus Research Data Platform",
+    lifespan=lifespan,
+    version=_get_distribution_version("globus-mcp"),
+    instructions=SERVER_INSTRUCTIONS,
+    description="Globus: Automation for the research lifecycle",
+)
 
 
 service_registry = {
