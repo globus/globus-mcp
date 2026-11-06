@@ -559,7 +559,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "globus-compute-sdk", specifier = ">=4.7.0,<5.0.0" },
-    { name = "globus-sdk", specifier = ">=4.4.0,<5.0.0" },
+    { name = "globus-sdk", specifier = ">=4.5.0,<5.0.0" },
     { name = "mcp", extras = ["cli"], specifier = ">=2.0.0,<3.0.0" },
 ]
 

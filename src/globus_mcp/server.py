@@ -5,6 +5,7 @@ from mcp.server.mcpserver import MCPServer
 
 from globus_mcp.context import lifespan
 from globus_mcp.services.compute.registry import register_compute
+from globus_mcp.services.search.registry import register_search
 from globus_mcp.services.transfer.registry import register_transfer
 
 SERVER_INSTRUCTIONS = """\
@@ -26,6 +27,7 @@ mcp = MCPServer(
 
 service_registry = {
     "compute": register_compute,
+    "search": register_search,
     "transfer": register_transfer,
 }
 services = list(service_registry.keys())

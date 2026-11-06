@@ -15,6 +15,9 @@ and collections that are visible to the user
 - `globus_transfer_get_task_events` - Get a list of task events
 - `globus_transfer_list_directory` - List contents of a directory on a collection
 
+### [Globus Search](https://docs.globus.org/api/search/)
+- `globus_search_show_index_description` — Fetch metadata for a single Globus Search index. List mode is not presently supported.
+
 ### [Globus Compute](https://docs.globus.org/compute/)
 
 - `globus_compute_list_endpoints` - List endpoints that the user has access to
@@ -41,7 +44,7 @@ The following configuration is compatible with most LLM applications that suppor
 
 ### Limiting Tool Registration
 
-By default, the Globus MCP server registers tools for every service. To register tools for only
+By default, the Globus MCP server registers tools for the most common services. To register tools for only
 specific services, use the `--services` command-line flag:
 
 ```json
@@ -52,7 +55,8 @@ specific services, use the `--services` command-line flag:
       "args": [
         "globus-mcp",
         "--services",
-        "compute"
+        "transfer",
+        "search"
       ]
     }
   }
