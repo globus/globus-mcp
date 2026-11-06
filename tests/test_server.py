@@ -2,7 +2,7 @@ from unittest.mock import Mock, patch
 
 import pytest
 
-from globus_mcp.server import main, mcp, services
+from globus_mcp.server import DEFAULT_SERVICES, main, mcp, services
 from tests.utils import random_string
 
 
@@ -13,8 +13,10 @@ def test_run_server_default(mock_mcp_run: Mock):
     ) as service_registry:
         with patch("sys.argv", ["globus-mcp"]):
             main()
-            for service in services:
+            for service in DEFAULT_SERVICES:
                 service_registry[service].assert_called_once_with(mcp)
+            for service in set(services) - set(DEFAULT_SERVICES):
+                service_registry[service].assert_not_called()
             mock_mcp_run.assert_called_once_with(transport="stdio")
 
 

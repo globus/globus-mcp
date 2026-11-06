@@ -31,6 +31,7 @@ service_registry = {
     "transfer": register_transfer,
 }
 services = list(service_registry.keys())
+DEFAULT_SERVICES = ("transfer", "search")  # compute disabled by default
 
 
 def parse_arguments() -> argparse.Namespace:
@@ -39,8 +40,12 @@ def parse_arguments() -> argparse.Namespace:
         "--services",
         nargs="+",
         choices=services,
-        default=services,
-        help="Globus services to install tools for. Defaults to all services.",
+        default=DEFAULT_SERVICES,
+        metavar="SERVICE",
+        help=(
+            f"Globus services to install tools for. Choices: {{{', '.join(services)}}}."
+            f" Defaults to: '{' '.join(DEFAULT_SERVICES)}'."
+        ),
     )
     return parser.parse_args()
 
