@@ -17,6 +17,7 @@ and collections that are visible to the user
 
 ### [Globus Search](https://docs.globus.org/api/search/)
 - `globus_search_show_index_description` — Fetch metadata for a single Globus Search index. List mode is not presently supported.
+- `globus_search_query` — query an index. Supports all search options: filters, facets, boosts, sort. Optional control of what fields are returned.
 
 ### [Globus Compute](https://docs.globus.org/compute/)
 
