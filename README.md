@@ -5,6 +5,9 @@ with [Globus](https://www.globus.org/) services.
 
 ## Supported Tools
 
+### [Globus Auth](https://docs.globus.org/api/auth/)
+- `globus_auth_userinfo` - Identify the current logged-in user. (always enabled)
+
 ### [Globus Transfer](https://docs.globus.org/api/transfer/)
 
 - `globus_transfer_list_endpoints_and_collections` - List endpoints and collections the user has

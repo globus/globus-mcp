@@ -3,7 +3,7 @@ from contextlib import asynccontextmanager
 from dataclasses import dataclass
 
 from globus_compute_sdk import Client
-from globus_sdk import GlobusApp, TransferClient
+from globus_sdk import AuthClient, GlobusApp, TransferClient
 from mcp.server.mcpserver import MCPServer
 
 from globus_mcp.auth import get_globus_app
@@ -12,6 +12,7 @@ from globus_mcp.auth import get_globus_app
 @dataclass
 class GlobusContext:
     app: GlobusApp
+    auth_client: AuthClient | None = None
     transfer_client: TransferClient | None = None
     compute_client: Client | None = None
 
