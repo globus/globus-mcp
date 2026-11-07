@@ -4,6 +4,7 @@ from importlib.metadata import version as _get_distribution_version
 from mcp.server.mcpserver import MCPServer
 
 from globus_mcp.context import lifespan
+from globus_mcp.core.audit import configure_audit_logging
 from globus_mcp.services.compute.registry import register_compute
 from globus_mcp.services.transfer.registry import register_transfer
 
@@ -44,6 +45,7 @@ def parse_arguments() -> argparse.Namespace:
 
 
 def main() -> None:
+    configure_audit_logging()
     args = parse_arguments()
     for service in args.services:
         service_registry[service](mcp)
