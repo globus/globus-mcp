@@ -8,6 +8,7 @@ from mcp.server.mcpserver.exceptions import ToolError
 from pydantic import Field
 
 from globus_mcp.context import GlobusContext
+from globus_mcp.core.audit import audited, log_tool_result
 from globus_mcp.services.transfer.client import get_transfer_client
 from globus_mcp.services.transfer.schemas import (
     TransferEndpoint,
@@ -18,6 +19,8 @@ from globus_mcp.services.transfer.schemas import (
     TransferFileList,
     TransferSubmitResponse,
 )
+
+_SERVICE = "transfer"
 
 
 def _handle_gare(
@@ -57,6 +60,7 @@ def _format_search_response(res: globus_sdk.IterableTransferResponse) -> Transfe
     )
 
 
+@audited(_SERVICE)
 def globus_transfer_list_endpoints_and_collections(
     filter_scope: Annotated[
         Literal[
@@ -102,6 +106,7 @@ def globus_transfer_list_endpoints_and_collections(
     return _format_search_response(res)
 
 
+@audited(_SERVICE)
 def globus_transfer_search_endpoints_and_collections(
     filter_fulltext: Annotated[
         str,
@@ -130,6 +135,7 @@ def globus_transfer_search_endpoints_and_collections(
     return _format_search_response(res)
 
 
+@audited(_SERVICE)
 def globus_transfer_submit_task(
     source_collection_id: Annotated[str, Field(description="ID of the source collection")],
     destination_collection_id: Annotated[
@@ -167,9 +173,17 @@ def globus_transfer_submit_task(
     except globus_sdk.GlobusAPIError as e:
         raise ToolError(f"Failed to submit transfer: {e}") from e
 
-    return TransferSubmitResponse(task_id=res.data["task_id"])
+    task_id = res.data["task_id"]
+    log_tool_result(
+        ctx,
+        tool_name=globus_transfer_submit_task.__name__,
+        service=_SERVICE,
+        result={"task_id": task_id},
+    )
+    return TransferSubmitResponse(task_id=task_id)
 
 
+@audited(_SERVICE)
 def globus_transfer_get_task_events(
     task_id: Annotated[str, Field(description="ID of the task")],
     limit: Annotated[int, Field(le=1_000, description="Maximum number of results to return.")] = 10,
@@ -201,6 +215,7 @@ def globus_transfer_get_task_events(
     return TransferEventList(limit=res["limit"], offset=res["offset"], data=events)
 
 
+@audited(_SERVICE)
 def globus_transfer_list_directory(
     collection_id: Annotated[str, Field(description="ID of the collection")],
     path: Annotated[str, Field(description="Path to a directory")],
