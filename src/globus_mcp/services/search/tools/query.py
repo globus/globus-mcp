@@ -16,10 +16,8 @@ from globus_mcp.services.search.schemas.gsearchresult import (
     FacetBucket,
     FacetResult,
     GSearchResult,
-    SearchEntry,
-    SearchSubject,
 )
-from globus_mcp.services.search.util.field_selection import compile_field_patterns, select_fields
+from globus_mcp.services.search.util.field_selection import OnlyFields, format_subject
 
 
 def _dump(items: list[BaseModel] | None) -> list[dict[str, Any]] | None:
@@ -55,7 +53,6 @@ def _build_query_body(
 def _format_query_response(
     data: dict[str, Any], only_fields: list[str] | None = None
 ) -> GSearchResult:
-    patterns = compile_field_patterns(only_fields) if only_fields else None
     facet_results = None
     if "facet_results" in data:
         facet_results = [
@@ -75,23 +72,7 @@ def _format_query_response(
         count=data["count"],
         offset=data["offset"],
         has_next_page=data["has_next_page"],
-        gmeta=[
-            SearchSubject(
-                subject=g["subject"],
-                entries=[
-                    SearchEntry(
-                        entry_id=e.get("entry_id"),
-                        content=(
-                            e["content"]
-                            if patterns is None
-                            else select_fields(e["content"], patterns)
-                        ),
-                    )
-                    for e in g["entries"]
-                ],
-            )
-            for g in data["gmeta"]
-        ],
+        gmeta=[format_subject(r["subject"], r["entries"], only_fields) for r in data["gmeta"]],
         facet_results=facet_results,
     )
 
@@ -133,19 +114,7 @@ def globus_search_query(
     sort: Annotated[
         list[Sort] | None, Field(description="Explicit result ordering, instead of relevance.")
     ] = None,
-    only_fields: Annotated[
-        list[str] | None,
-        Field(
-            min_length=1,
-            description=(
-                "Optionally limit each result to these fields, to keep responses small."
-                " Syntax: Dotted paths into nested objects, eg `dc.titles.title`; `*` is wildcard,"
-                " eg `dc.*`. Selecting an object returns everything under it. Paths that match"
-                " nothing are ignored, so an entry with none of these fields comes back empty: "
-                " re-request with different or more fields."
-            ),
-        ),
-    ] = None,
+    only_fields: OnlyFields = None,
     # Small page limits to avoid overwhelming LLM context
     limit: Annotated[int, Field(ge=1, le=50, description="Maximum results to return.")] = 10,
     offset: Annotated[int, Field(ge=0, description="Zero based offset into the result set.")] = 0,
@@ -160,6 +129,8 @@ def globus_search_query(
     Result fields are index-specific. Search payloads may be big. To avoid overwhelming LLM context,
         it is recommended to sample a few records first, then use the `only_fields`
         option to restrict result payload.
+
+    See `globus_search_get_item` for single-item retrieval.
     """
     # Syntax ref: https://docs.globus.org/api/search/reference/post_query/#gboost
     if q is None and not filters:

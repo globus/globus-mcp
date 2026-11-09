@@ -17,7 +17,26 @@ Keys that literally contain a `.` (not nested) are matched by their full path st
 """
 
 import re
-from typing import Any
+from typing import Annotated, Any
+
+from pydantic import Field
+
+from globus_mcp.services.search.schemas.gsearchresult import SearchEntry, SearchSubject
+
+# Shared by every tool that offers client-side field selection
+OnlyFields = Annotated[
+    list[str] | None,
+    Field(
+        min_length=1,
+        description=(
+            "Optionally limit each result to these fields, to keep responses small."
+            " Syntax: Dotted paths into nested objects, eg `dc.titles.title`; `*` is wildcard,"
+            " eg `dc.*`. Selecting an object returns everything under it. Paths that match"
+            " nothing are ignored, so an entry with none of these fields comes back empty: "
+            " re-request with different or more fields."
+        ),
+    ),
+]
 
 _MISSING = object()
 
@@ -60,3 +79,25 @@ def select_fields(content: dict[str, Any], patterns: list[re.Pattern[str]]) -> d
     """
     selected = _select(content, "", patterns)
     return {} if selected is _MISSING else selected
+
+
+def format_subject(
+    subject: str, entries: list[dict[str, Any]], only_fields: list[str] | None = None
+) -> SearchSubject:
+    """
+    Build a `SearchSubject` from raw Search entries (dicts with `entry_id` and `content`),
+    optionally trimming each entry's `content` to `only_fields`.
+    """
+    patterns = compile_field_patterns(only_fields) if only_fields else None
+    return SearchSubject(
+        subject=subject,
+        entries=[
+            SearchEntry(
+                entry_id=e.get("entry_id"),
+                content=(
+                    e["content"] if patterns is None else select_fields(e["content"], patterns)
+                ),
+            )
+            for e in entries
+        ],
+    )
