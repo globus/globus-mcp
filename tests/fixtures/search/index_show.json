@@ -1,0 +1,20 @@
+{
+  "@datatype": "GSearchIndex",
+  "@version": "2017-09-01",
+  "available": true,
+  "content_last_modified_date": "2026-04-28 02:03:24",
+  "creation_date": "2026-03-31 13:34:52",
+  "description": "Sample data",
+  "display_name": "Testing repository",
+  "id": "00000000-0000-0000-0000-000000000000",
+  "is_trial": false,
+  "max_size_in_mb": 20000,
+  "num_entries": 1565402,
+  "num_subjects": 1565402,
+  "permissions": [
+    "owner"
+  ],
+  "size_in_mb": 11067,
+  "status": "open",
+  "subscription_id": "REDACTED"
+}
