@@ -132,7 +132,7 @@ def globus_search_query(
 
     See `globus_search_get_item` for single-item retrieval.
     """
-    # Syntax ref: https://docs.globus.org/api/search/reference/post_query/#gboost
+    # Syntax ref: https://docs.globus.org/api/search/reference/post_query/
     client = get_search_client(ctx)
     body = _build_query_body(
         q=q,
