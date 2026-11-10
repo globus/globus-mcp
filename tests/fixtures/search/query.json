@@ -1,0 +1,602 @@
+{
+  "@datatype": "GSearchResult",
+  "@version": "2017-09-01",
+  "count": 3,
+  "gmeta": [
+    {
+      "@datatype": "GMetaResult",
+      "@version": "2017-09-01",
+      "entries": [
+        {
+          "content": {
+            "alternateIdentifiers": [
+              {
+                "alternateIdentifier": "34981557",
+                "alternateIdentifierType": "PMID"
+              }
+            ],
+            "contributors": [],
+            "creators": [
+              {
+                "affiliation": {
+                  "name": "Department of Basic Medical Sciences, Dentistry Faculty, Marmara University, \u0130stanbul, Turkey."
+                },
+                "familyName": "Tufan",
+                "givenName": "Elif",
+                "name": "Tufan, Elif",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Department of Basic Medical Sciences, Dentistry Faculty, Marmara University, \u0130stanbul, Turkey."
+                },
+                "familyName": "Sivas",
+                "givenName": "G\u00fczin G\u00f6ksun",
+                "name": "Sivas, G\u00fczin G\u00f6ksun",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Department of Basic Medical Sciences, Dentistry Faculty, Marmara University, \u0130stanbul, Turkey."
+                },
+                "familyName": "G\u00fcrel-G\u00f6kmen",
+                "givenName": "Beg\u00fcm",
+                "name": "G\u00fcrel-G\u00f6kmen, Beg\u00fcm",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Department of Basic Medical Sciences, Dentistry Faculty, Marmara University, \u0130stanbul, Turkey."
+                },
+                "familyName": "Y\u0131lmaz-Karao\u011flu",
+                "givenName": "S\u00fcmeyye",
+                "name": "Y\u0131lmaz-Karao\u011flu, S\u00fcmeyye",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Department of Basic Medical Sciences, Dentistry Faculty, Marmara University, \u0130stanbul, Turkey."
+                },
+                "familyName": "Ercan",
+                "givenName": "Dursun",
+                "name": "Ercan, Dursun",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Vocational School of Health Services, Marmara University, \u0130stanbul, Turkey."
+                },
+                "familyName": "\u00d6zbeyli",
+                "givenName": "Dilek",
+                "name": "\u00d6zbeyli, Dilek",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Vocational School of Health Services, Fenerbahce University, \u0130stanbul, Turkey."
+                },
+                "familyName": "\u015eener",
+                "givenName": "G\u00f6ksel",
+                "name": "\u015eener, G\u00f6ksel",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Department of Basic Medical Sciences, Dentistry Faculty, Marmara University, \u0130stanbul, Turkey."
+                },
+                "familyName": "Tunali-Akbay",
+                "givenName": "Tu\u011fba",
+                "name": "Tunali-Akbay, Tu\u011fba",
+                "nameIdentifiers": [
+                  {
+                    "nameIdentifier": "0000-0002-2091-9298",
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeUri": "https://orcid.org"
+                  }
+                ]
+              }
+            ],
+            "dates": [
+              {
+                "date": "2021-10-14T00:00:00Z",
+                "dateType": "Submitted"
+              },
+              {
+                "date": "2021-11-16T00:00:00Z",
+                "dateType": "Accepted"
+              },
+              {
+                "date": "2021-11-11T00:00:00Z",
+                "dateType": "Updated"
+              },
+              {
+                "date": "2022-01-03T00:00:00Z",
+                "dateType": "Created"
+              }
+            ],
+            "descriptions": [
+              {
+                "description": "This study aims to investigate the effects of whey proteins on SARS CoV-2 in methotrexate-induced lung tissue damage in rats. To determine the possible effects, rats were divided into four groups as control, control + whey, methotrexate (20\u00a0mg/kg, i.p.) and methotrexate + whey. Whey protein concentrate (2\u00a0g/kg, oral gavage) was administered for 10\u00a0days. Cytokine levels were measured and protein electrophoresis was carried out in serum samples. Lipid peroxidation, nitric oxide and glutathione level, and superoxide dismutase and glutathione S transferase activities were determined in lung samples. Inhibition of SARS CoV-2-targeted lung furin activity and SARS CoV-2 spike protein-angiotensin converting enzyme binding with whey protein concentrate were also measured in each group. In conclusion, whey protein concentrate improved methotrexate-induced lung damage and inhibited lung furin activity targeting SARS-CoV-2 S1/S2 site cleavage and SARS CoV-2 spike protein-angiotensin converting enzyme binding. Whey proteins are potential protective candidates that inhibit SARS CoV-2-related interactions, even in methotrexate-induced lung injury. PRACTICAL APPLICATIONS: Whey proteins have anticarcinogenic, antihypertensive, antioxidant, antibacterial, antiviral, and immunomodulating properties due to the protein, bioactive peptide, and essential amino acid content. Methotrexate is a folate antagonist and inhibits cell proliferation and purine synthesis. The combined use of whey protein concentrate and methotrexate may be an alternative in the development of new strategies to the treatment approaches against COVID-19. In addition, according to the results of this study, it is thought that the protective effect of whey proteins in healthy conditions before encountering the SARS CoV-2 may be higher than those who have never used it.",
+                "descriptionType": "Abstract"
+              }
+            ],
+            "formats": [],
+            "fundingReferences": [],
+            "identifier": {
+              "identifier": "10.1111/jfbc.14039",
+              "identifierType": "DOI"
+            },
+            "language": "eng",
+            "publicationYear": "2022",
+            "publisher": {
+              "name": "Journal of food biochemistry"
+            },
+            "pubmed": {
+              "publication_types": [
+                "Journal Article"
+              ]
+            },
+            "relatedIdentifiers": [],
+            "relatedItems": [
+              {
+                "creators": [],
+                "firstPage": "e14039",
+                "issue": "6",
+                "relatedItemIdentifier": {
+                  "relatedItemIdentifier": "1745-4514",
+                  "relatedItemIdentifierType": "ISSN"
+                },
+                "relatedItemType": "Journal",
+                "relationType": "IsPublishedIn",
+                "titles": [
+                  {
+                    "title": "Journal of food biochemistry"
+                  }
+                ],
+                "volume": "46"
+              }
+            ],
+            "resourceType": {
+              "resourceTypeGeneral": "JournalArticle"
+            },
+            "rightsList": [],
+            "subjects": [
+              {
+                "subject": "Angiotensin-Converting Enzyme 2"
+              },
+              {
+                "subject": "Animals"
+              },
+              {
+                "subject": "Furin"
+              },
+              {
+                "subject": "Lung"
+              },
+              {
+                "subject": "Methotrexate"
+              },
+              {
+                "subject": "Peptidyl-Dipeptidase A"
+              },
+              {
+                "subject": "Rats"
+              },
+              {
+                "subject": "SARS-CoV-2"
+              },
+              {
+                "subject": "Spike Glycoprotein, Coronavirus"
+              },
+              {
+                "subject": "Whey Proteins"
+              },
+              {
+                "subject": "COVID-19 Drug Treatment"
+              },
+              {
+                "subject": "COVID-19"
+              },
+              {
+                "subject": "SARS CoV-2"
+              },
+              {
+                "subject": "cytokines"
+              },
+              {
+                "subject": "lung"
+              },
+              {
+                "subject": "methotrexate"
+              },
+              {
+                "subject": "whey protein concentrate"
+              }
+            ],
+            "titles": [
+              {
+                "title": "Inhibitory effect of whey protein concentrate on SARS-CoV-2-targeted furin activity and spike protein-ACE2 binding in methotrexate-induced lung damage."
+              }
+            ]
+          },
+          "entry_id": null,
+          "matched_principal_sets": []
+        }
+      ],
+      "subject": "pubmed:34981557"
+    },
+    {
+      "@datatype": "GMetaResult",
+      "@version": "2017-09-01",
+      "entries": [
+        {
+          "content": {
+            "alternateIdentifiers": [
+              {
+                "alternateIdentifier": "34983422",
+                "alternateIdentifierType": "PMID"
+              },
+              {
+                "alternateIdentifier": "PMC8725376",
+                "alternateIdentifierType": "PMCID"
+              }
+            ],
+            "contributors": [],
+            "creators": [
+              {
+                "affiliation": {
+                  "name": "Shandong Provincial Hospital for Skin Diseases & Shandong Provincial Institute of Dermatology and Venereology, Shandong First Medical University & Shandong Academy of Medical Sciences, 27397 Jingshi Road, Jinan, 250022, Shandong, China."
+                },
+                "familyName": "Ye",
+                "givenName": "Xing",
+                "name": "Ye, Xing",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Shandong Provincial Hospital for Skin Diseases & Shandong Provincial Institute of Dermatology and Venereology, Shandong First Medical University & Shandong Academy of Medical Sciences, 27397 Jingshi Road, Jinan, 250022, Shandong, China."
+                },
+                "familyName": "Li",
+                "givenName": "Fu-Rong",
+                "name": "Li, Fu-Rong",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Shandong Provincial Hospital for Skin Diseases & Shandong Provincial Institute of Dermatology and Venereology, Shandong First Medical University & Shandong Academy of Medical Sciences, 27397 Jingshi Road, Jinan, 250022, Shandong, China."
+                },
+                "familyName": "Pan",
+                "givenName": "Qing",
+                "name": "Pan, Qing",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Shandong Provincial Hospital for Skin Diseases & Shandong Provincial Institute of Dermatology and Venereology, Shandong First Medical University & Shandong Academy of Medical Sciences, 27397 Jingshi Road, Jinan, 250022, Shandong, China."
+                },
+                "familyName": "Li",
+                "givenName": "Zhen",
+                "name": "Li, Zhen",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Shandong Provincial Hospital for Skin Diseases & Shandong Provincial Institute of Dermatology and Venereology, Shandong First Medical University & Shandong Academy of Medical Sciences, 27397 Jingshi Road, Jinan, 250022, Shandong, China."
+                },
+                "familyName": "Yu",
+                "givenName": "Gong-Qi",
+                "name": "Yu, Gong-Qi",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Shandong Provincial Hospital for Skin Diseases & Shandong Provincial Institute of Dermatology and Venereology, Shandong First Medical University & Shandong Academy of Medical Sciences, 27397 Jingshi Road, Jinan, 250022, Shandong, China."
+                },
+                "familyName": "Liu",
+                "givenName": "Hong",
+                "name": "Liu, Hong",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Shandong Provincial Hospital for Skin Diseases & Shandong Provincial Institute of Dermatology and Venereology, Shandong First Medical University & Shandong Academy of Medical Sciences, 27397 Jingshi Road, Jinan, 250022, Shandong, China."
+                },
+                "familyName": "Liu",
+                "givenName": "Jian",
+                "name": "Liu, Jian",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Shandong Provincial Hospital for Skin Diseases & Shandong Provincial Institute of Dermatology and Venereology, Shandong First Medical University & Shandong Academy of Medical Sciences, 27397 Jingshi Road, Jinan, 250022, Shandong, China. huaipengcheng@163.com."
+                },
+                "familyName": "Huai",
+                "givenName": "Peng-Cheng",
+                "name": "Huai, Peng-Cheng",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Shandong Provincial Hospital for Skin Diseases & Shandong Provincial Institute of Dermatology and Venereology, Shandong First Medical University & Shandong Academy of Medical Sciences, 27397 Jingshi Road, Jinan, 250022, Shandong, China."
+                },
+                "familyName": "Zhang",
+                "givenName": "Fu-Ren",
+                "name": "Zhang, Fu-Ren",
+                "nameIdentifiers": []
+              }
+            ],
+            "dates": [
+              {
+                "date": "2021-07-12T00:00:00Z",
+                "dateType": "Submitted"
+              },
+              {
+                "date": "2021-12-14T00:00:00Z",
+                "dateType": "Accepted"
+              },
+              {
+                "date": "2022-01-04T00:00:00Z",
+                "dateType": "Created"
+              }
+            ],
+            "descriptions": [
+              {
+                "description": "BACKGROUND: The reported incidence of sexually transmitted infections (STIs) in China has been increasing over the last decades, especially among drug users, which has become one of the main burdens of public health in China. This study was conducted to estimate the prevalence and associated factors of STIs among non-injecting methamphetamine (MA) users in Eastern China.\n\nMETHODS: A cross-sectional survey was conducted among 632 MA users in Eastern China in 2017. Demographic characteristics, sexual behaviors, behaviors of MA use and sexual health knowledge were collected through questionnaire. First pass urine specimens were collected and detected for deoxyribonucleic acid (DNA) of Neisseria gonorrhoeae (NG) and Chlamydia trachomatis (CT) with Nucleic Acid Amplification Technology (NAAT), while blood specimens were collected and detected for antibodies of Human immunodeficiency virus (HIV), Herpes simplex virus type-2 (HSV-2), and syphilis with enzyme-linked immune sorbent assay (ELISA).\n\nRESULTS: Among the 632 MA users, 464 (73.42%) were males, 60.92% were <\u200935\u00a0years of age, 546 (86.39%) were Shandong residents. 317 (50.16%, 95% CI 46.26-54.06%) participants were tested positive for at least one kind of STIs, including 242 (38.29%, 95% CI 34.50-42.08%) for HSV-2, 107 (16.93%, 95% CI 14.01-19.85%) for active syphilis, 46 (7.28%, 95% CI 5.25-9.31%) for treated syphilis, 40 (6.33%, 95% CI 4.43-8.23%) for CT, 6 (0.95%, 95% CI 0.19-1.71%) for HIV, and 3 (0.47%, 95% CI 0.06-1.00%) for NG infection. 99 (15.66%, 95% CI 12.83-18.49%) participants were co-infected with two kinds of STIs, including 91 (14.40%, 95% CI 11.66-17.14%) participants were co-infected with HSV-2 and syphilis. 14 (2.22%, 95% CI 1.07-3.37%) participants were co-infected with three kinds of STIs, and 4 HIV positive participants were co-infected with both syphilis and HSV-2. In the multiple logistic regression analysis, the results showed that females (adjusted OR [AOR]\u2009=\u20097.30, 95% CI 4.34-12.30) and individuals \u2265\u200935\u00a0years of age (AOR\u2009=\u20092.97, 95% CI 2.04-4.32) were more likely to test positive for STIs among MA users, whereas participants who acquired sexual health knowledge primarily from the Internet (AOR\u2009=\u20090.57, 95% CI 0.40-0.82) and those whose regular partners did not use drugs (AOR\u2009=\u20090.59, 95% CI 0.37-0.94) were less likely.\n\nCONCLUSIONS: This study found that the prevalence of HSV-2 and syphilis are alarming high among non-injecting MA users in Shandong Province in Eastern China. The prevention and control intervention of STIs among MA users in Shandong were needed, especially on females and MA users \u2265\u200935\u00a0years of age.",
+                "descriptionType": "Abstract"
+              }
+            ],
+            "formats": [],
+            "fundingReferences": [
+              {
+                "awardNumber": "202012050275",
+                "funderName": "Shandong Provincial Medical and Health Development Project"
+              }
+            ],
+            "identifier": {
+              "identifier": "10.1186/s12879-021-06987-8",
+              "identifierType": "DOI"
+            },
+            "language": "eng",
+            "publicationYear": "2022",
+            "publisher": {
+              "name": "BMC infectious diseases"
+            },
+            "pubmed": {
+              "publication_types": [
+                "Journal Article"
+              ]
+            },
+            "relatedIdentifiers": [],
+            "relatedItems": [
+              {
+                "creators": [],
+                "firstPage": "7",
+                "issue": "1",
+                "relatedItemIdentifier": {
+                  "relatedItemIdentifier": "1471-2334",
+                  "relatedItemIdentifierType": "ISSN"
+                },
+                "relatedItemType": "Journal",
+                "relationType": "IsPublishedIn",
+                "titles": [
+                  {
+                    "title": "BMC infectious diseases"
+                  }
+                ],
+                "volume": "22"
+              }
+            ],
+            "resourceType": {
+              "resourceTypeGeneral": "JournalArticle"
+            },
+            "rightsList": [],
+            "subjects": [
+              {
+                "subject": "China"
+              },
+              {
+                "subject": "Cross-Sectional Studies"
+              },
+              {
+                "subject": "Female"
+              },
+              {
+                "subject": "HIV Infections"
+              },
+              {
+                "subject": "Humans"
+              },
+              {
+                "subject": "Male"
+              },
+              {
+                "subject": "Methamphetamine"
+              },
+              {
+                "subject": "Prevalence"
+              },
+              {
+                "subject": "Risk Factors"
+              },
+              {
+                "subject": "Sexual Behavior"
+              },
+              {
+                "subject": "Sexually Transmitted Diseases"
+              },
+              {
+                "subject": "Syphilis"
+              },
+              {
+                "subject": "Associated factors"
+              },
+              {
+                "subject": "STIs"
+              }
+            ],
+            "titles": [
+              {
+                "title": "Prevalence and associated factors of sexually transmitted infections among methamphetamine users in Eastern China: a cross-sectional study."
+              }
+            ]
+          },
+          "entry_id": null,
+          "matched_principal_sets": []
+        }
+      ],
+      "subject": "pubmed:34983422"
+    },
+    {
+      "@datatype": "GMetaResult",
+      "@version": "2017-09-01",
+      "entries": [
+        {
+          "content": {
+            "alternateIdentifiers": [
+              {
+                "alternateIdentifier": "34987792",
+                "alternateIdentifierType": "PMID"
+              },
+              {
+                "alternateIdentifier": "PMC8721372",
+                "alternateIdentifierType": "PMCID"
+              }
+            ],
+            "contributors": [],
+            "creators": [
+              {
+                "affiliation": {
+                  "name": "Public Health Faculty, University of Sriwijaya, JL. Raya Palembang-Prabumulih KM 32 Indralaya, Ogan Ilir, Sumatera Selatan, Palembang 30662, Indonesia."
+                },
+                "familyName": "Najmah",
+                "givenName": "Najmah",
+                "name": "Najmah, Najmah",
+                "nameIdentifiers": [
+                  {
+                    "nameIdentifier": "0000-0002-7370-9702",
+                    "nameIdentifierScheme": "ORCID",
+                    "schemeUri": "https://orcid.org"
+                  }
+                ]
+              },
+              {
+                "affiliation": {
+                  "name": "Monash University, Clayton, VIC, Australia."
+                },
+                "familyName": "Davies",
+                "givenName": "Sharyn Graham",
+                "name": "Davies, Sharyn Graham",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "INCEIF, Kuala Lumpur, Malaysia."
+                },
+                "familyName": "Kusnan",
+                "givenName": "Kusnan",
+                "name": "Kusnan, Kusnan",
+                "nameIdentifiers": []
+              },
+              {
+                "affiliation": {
+                  "name": "Monash University, Clayton, VIC, Australia."
+                },
+                "familyName": "Davies",
+                "givenName": "Tom Graham",
+                "name": "Davies, Tom Graham",
+                "nameIdentifiers": []
+              }
+            ],
+            "dates": [
+              {
+                "date": "2021-07-22T00:00:00Z",
+                "dateType": "Submitted"
+              },
+              {
+                "date": "2021-11-15T00:00:00Z",
+                "dateType": "Accepted"
+              },
+              {
+                "date": "2021-12-20T00:00:00Z",
+                "dateType": "Created"
+              }
+            ],
+            "descriptions": [
+              {
+                "description": "BACKGROUND: Women living with HIV in Indonesia encounter challenging obstacles to healthcare, which is exacerbated by COVID-19. Access is difficult as there are limited numbers of poorly supported healthcare providers. Women also face significant stigma when disclosing their HIV-status.\n\nOBJECTIVES: Our main purpose is to give a voice to disempowered women living with HIV, by normalising the discussion of HIV, to empower health professionals to better understand the issues faced by women living with HIV, and develop improved treatment practices.\n\nDESIGN: Our project was guided by a Feminist Participatory Action Research (FPAR) framework. FPAR refers to 'a participatory and action-oriented approach to research that centres gender and women's experiences both theoretically and practically'. It creates meaningful participation for women throughout the research process, ensuring a collective critical consciousness that challenges oppressive attitudes, beliefs, and practices that may be deeply embedded in society.\n\nMETHOD: Purposive sampling and a thematic analysis was applied to focus group discussions with 20 women living with HIV and 20 women without HIV in Palembang, South Sumatra.\n\nRESULTS: When women living with HIV face a difficult decision, do they disclose their status knowing that they may face stigma and even a refusal to be treated; or do they conceal their status and face not receiving the right care? In this article, we explore the stories of women living with HIV as they seek medical treatment during the COVID-19 pandemic. We show that there is no optimal solution for women as they lose whether they disclose their HIV status or not.\n\nCONCLUSION: Women's stories around HIV and COVID-19 intersect with conditions such as poverty and discrimination, as well as embedded gender systems, creating overlapping barriers to treatment. Government must challenge this culture by introducing a comprehensive sex and HIV education programme. This would normalise discussions of HIV-related topics, leading to improved health outcomes.",
+                "descriptionType": "Abstract"
+              }
+            ],
+            "formats": [],
+            "fundingReferences": [],
+            "identifier": {
+              "identifier": "10.1177/20499361211064191",
+              "identifierType": "DOI"
+            },
+            "language": "eng",
+            "publicationYear": "2021",
+            "publisher": {
+              "name": "Therapeutic advances in infectious disease"
+            },
+            "pubmed": {
+              "publication_types": [
+                "Journal Article"
+              ]
+            },
+            "relatedIdentifiers": [],
+            "relatedItems": [
+              {
+                "creators": [],
+                "firstPage": "20499361211064191",
+                "relatedItemIdentifier": {
+                  "relatedItemIdentifier": "2049-9361",
+                  "relatedItemIdentifierType": "ISSN"
+                },
+                "relatedItemType": "Journal",
+                "relationType": "IsPublishedIn",
+                "titles": [
+                  {
+                    "title": "Therapeutic advances in infectious disease"
+                  }
+                ],
+                "volume": "8"
+              }
+            ],
+            "resourceType": {
+              "resourceTypeGeneral": "JournalArticle"
+            },
+            "rightsList": [],
+            "subjects": [
+              {
+                "subject": "COVID-19 pandemic"
+              },
+              {
+                "subject": "Indonesia"
+              },
+              {
+                "subject": "health services"
+              },
+              {
+                "subject": "mothers"
+              },
+              {
+                "subject": "women living with HIV"
+              }
+            ],
+            "titles": [
+              {
+                "title": "'It's better to treat a COVID patient than a HIV patient': using feminist participatory research to assess women's challenges to access HIV care in Indonesia during the COVID-19 pandemic."
+              }
+            ]
+          },
+          "entry_id": null,
+          "matched_principal_sets": []
+        }
+      ],
+      "subject": "pubmed:34987792"
+    }
+  ],
+  "has_next_page": true,
+  "offset": 0,
+  "total": 1565402
+}

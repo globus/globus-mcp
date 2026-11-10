@@ -122,20 +122,17 @@ def globus_search_query(
     ctx: Context[GlobusContext],
 ) -> GSearchResult:
     """
-    Query a Globus Search index.
+    Query a Globus Search index and return records visible to the user.
 
     For advanced queries: nested fields are separated with `.`, eg `dc.title`.
 
     Result fields are index-specific. Search payloads may be big. To avoid overwhelming LLM context,
-        it is recommended to sample a few records first, then use the `only_fields`
-        option to restrict result payload.
+        always sample a few records first, then use the `only_fields` option to restrict
+        result payload for all routine queries.
 
     See `globus_search_get_item` for single-item retrieval.
     """
     # Syntax ref: https://docs.globus.org/api/search/reference/post_query/#gboost
-    if q is None and not filters:
-        raise ToolError("At least one of `q` or `filters` is required.")
-
     client = get_search_client(ctx)
     body = _build_query_body(
         q=q,
