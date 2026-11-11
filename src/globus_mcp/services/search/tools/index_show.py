@@ -21,6 +21,8 @@ def globus_search_show_index_description(
 ) -> SearchIndex:
     """
     Describe any one Globus Search index (a set of searchable items).
+
+    Returns only metadata. It does not return a list of available fields.
     """
     client = get_search_client(ctx)
 
