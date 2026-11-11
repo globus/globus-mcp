@@ -1,0 +1,8 @@
+{
+  "@datatype": "GError",
+  "@version": "2017-09-01",
+  "status": 404,
+  "code": "NotFound.NoSuchIndex",
+  "message": "There is no search index named \"00000000-0000-0000-0000-000000000000\"",
+  "request_id": "REDACTED"
+}

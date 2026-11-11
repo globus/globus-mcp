@@ -18,3 +18,4 @@ async def test_lifespan_yields_globus_context():
             assert context.app is mock_app
             assert context.transfer_client is None
             assert context.compute_client is None
+            assert context.search_client is None

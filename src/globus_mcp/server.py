@@ -5,6 +5,7 @@ from mcp.server.mcpserver import MCPServer
 
 from globus_mcp.context import lifespan
 from globus_mcp.services.compute.registry import register_compute
+from globus_mcp.services.search.registry import register_search
 from globus_mcp.services.transfer.registry import register_transfer
 
 SERVER_INSTRUCTIONS = """\
@@ -26,9 +27,11 @@ mcp = MCPServer(
 
 service_registry = {
     "compute": register_compute,
+    "search": register_search,
     "transfer": register_transfer,
 }
 services = list(service_registry.keys())
+DEFAULT_SERVICES = ("transfer", "search")  # compute disabled by default
 
 
 def parse_arguments() -> argparse.Namespace:
@@ -37,8 +40,12 @@ def parse_arguments() -> argparse.Namespace:
         "--services",
         nargs="+",
         choices=services,
-        default=services,
-        help="Globus services to install tools for. Defaults to all services.",
+        default=DEFAULT_SERVICES,
+        metavar="SERVICE",
+        help=(
+            f"Globus services to install tools for. Choices: {{{', '.join(services)}}}."
+            f" Defaults to: '{' '.join(DEFAULT_SERVICES)}'."
+        ),
     )
     return parser.parse_args()
 

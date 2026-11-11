@@ -1,0 +1,222 @@
+{
+  "@datatype": "GMetaResult",
+  "@version": "2017-09-01",
+  "entries": [
+    {
+      "content": {
+        "alternateIdentifiers": [
+          {
+            "alternateIdentifier": "34981557",
+            "alternateIdentifierType": "PMID"
+          }
+        ],
+        "contributors": [],
+        "creators": [
+          {
+            "affiliation": {
+              "name": "Department of Basic Medical Sciences, Dentistry Faculty, Marmara University, \u0130stanbul, Turkey."
+            },
+            "familyName": "Tufan",
+            "givenName": "Elif",
+            "name": "Tufan, Elif",
+            "nameIdentifiers": []
+          },
+          {
+            "affiliation": {
+              "name": "Department of Basic Medical Sciences, Dentistry Faculty, Marmara University, \u0130stanbul, Turkey."
+            },
+            "familyName": "Sivas",
+            "givenName": "G\u00fczin G\u00f6ksun",
+            "name": "Sivas, G\u00fczin G\u00f6ksun",
+            "nameIdentifiers": []
+          },
+          {
+            "affiliation": {
+              "name": "Department of Basic Medical Sciences, Dentistry Faculty, Marmara University, \u0130stanbul, Turkey."
+            },
+            "familyName": "G\u00fcrel-G\u00f6kmen",
+            "givenName": "Beg\u00fcm",
+            "name": "G\u00fcrel-G\u00f6kmen, Beg\u00fcm",
+            "nameIdentifiers": []
+          },
+          {
+            "affiliation": {
+              "name": "Department of Basic Medical Sciences, Dentistry Faculty, Marmara University, \u0130stanbul, Turkey."
+            },
+            "familyName": "Y\u0131lmaz-Karao\u011flu",
+            "givenName": "S\u00fcmeyye",
+            "name": "Y\u0131lmaz-Karao\u011flu, S\u00fcmeyye",
+            "nameIdentifiers": []
+          },
+          {
+            "affiliation": {
+              "name": "Department of Basic Medical Sciences, Dentistry Faculty, Marmara University, \u0130stanbul, Turkey."
+            },
+            "familyName": "Ercan",
+            "givenName": "Dursun",
+            "name": "Ercan, Dursun",
+            "nameIdentifiers": []
+          },
+          {
+            "affiliation": {
+              "name": "Vocational School of Health Services, Marmara University, \u0130stanbul, Turkey."
+            },
+            "familyName": "\u00d6zbeyli",
+            "givenName": "Dilek",
+            "name": "\u00d6zbeyli, Dilek",
+            "nameIdentifiers": []
+          },
+          {
+            "affiliation": {
+              "name": "Vocational School of Health Services, Fenerbahce University, \u0130stanbul, Turkey."
+            },
+            "familyName": "\u015eener",
+            "givenName": "G\u00f6ksel",
+            "name": "\u015eener, G\u00f6ksel",
+            "nameIdentifiers": []
+          },
+          {
+            "affiliation": {
+              "name": "Department of Basic Medical Sciences, Dentistry Faculty, Marmara University, \u0130stanbul, Turkey."
+            },
+            "familyName": "Tunali-Akbay",
+            "givenName": "Tu\u011fba",
+            "name": "Tunali-Akbay, Tu\u011fba",
+            "nameIdentifiers": [
+              {
+                "nameIdentifier": "0000-0002-2091-9298",
+                "nameIdentifierScheme": "ORCID",
+                "schemeUri": "https://orcid.org"
+              }
+            ]
+          }
+        ],
+        "dates": [
+          {
+            "date": "2021-10-14T00:00:00Z",
+            "dateType": "Submitted"
+          },
+          {
+            "date": "2021-11-16T00:00:00Z",
+            "dateType": "Accepted"
+          },
+          {
+            "date": "2021-11-11T00:00:00Z",
+            "dateType": "Updated"
+          },
+          {
+            "date": "2022-01-03T00:00:00Z",
+            "dateType": "Created"
+          }
+        ],
+        "descriptions": [
+          {
+            "description": "This study aims to investigate the effects of whey proteins on SARS CoV-2 in methotrexate-induced lung tissue damage in rats. To determine the possible effects, rats were divided into four groups as control, control + whey, methotrexate (20\u00a0mg/kg, i.p.) and methotrexate + whey. Whey protein concentrate (2\u00a0g/kg, oral gavage) was administered for 10\u00a0days. Cytokine levels were measured and protein electrophoresis was carried out in serum samples. Lipid peroxidation, nitric oxide and glutathione level, and superoxide dismutase and glutathione S transferase activities were determined in lung samples. Inhibition of SARS CoV-2-targeted lung furin activity and SARS CoV-2 spike protein-angiotensin converting enzyme binding with whey protein concentrate were also measured in each group. In conclusion, whey protein concentrate improved methotrexate-induced lung damage and inhibited lung furin activity targeting SARS-CoV-2 S1/S2 site cleavage and SARS CoV-2 spike protein-angiotensin converting enzyme binding. Whey proteins are potential protective candidates that inhibit SARS CoV-2-related interactions, even in methotrexate-induced lung injury. PRACTICAL APPLICATIONS: Whey proteins have anticarcinogenic, antihypertensive, antioxidant, antibacterial, antiviral, and immunomodulating properties due to the protein, bioactive peptide, and essential amino acid content. Methotrexate is a folate antagonist and inhibits cell proliferation and purine synthesis. The combined use of whey protein concentrate and methotrexate may be an alternative in the development of new strategies to the treatment approaches against COVID-19. In addition, according to the results of this study, it is thought that the protective effect of whey proteins in healthy conditions before encountering the SARS CoV-2 may be higher than those who have never used it.",
+            "descriptionType": "Abstract"
+          }
+        ],
+        "formats": [],
+        "fundingReferences": [],
+        "identifier": {
+          "identifier": "10.1111/jfbc.14039",
+          "identifierType": "DOI"
+        },
+        "language": "eng",
+        "publicationYear": "2022",
+        "publisher": {
+          "name": "Journal of food biochemistry"
+        },
+        "pubmed": {
+          "publication_types": [
+            "Journal Article"
+          ]
+        },
+        "relatedIdentifiers": [],
+        "relatedItems": [
+          {
+            "creators": [],
+            "firstPage": "e14039",
+            "issue": "6",
+            "relatedItemIdentifier": {
+              "relatedItemIdentifier": "1745-4514",
+              "relatedItemIdentifierType": "ISSN"
+            },
+            "relatedItemType": "Journal",
+            "relationType": "IsPublishedIn",
+            "titles": [
+              {
+                "title": "Journal of food biochemistry"
+              }
+            ],
+            "volume": "46"
+          }
+        ],
+        "resourceType": {
+          "resourceTypeGeneral": "JournalArticle"
+        },
+        "rightsList": [],
+        "subjects": [
+          {
+            "subject": "Angiotensin-Converting Enzyme 2"
+          },
+          {
+            "subject": "Animals"
+          },
+          {
+            "subject": "Furin"
+          },
+          {
+            "subject": "Lung"
+          },
+          {
+            "subject": "Methotrexate"
+          },
+          {
+            "subject": "Peptidyl-Dipeptidase A"
+          },
+          {
+            "subject": "Rats"
+          },
+          {
+            "subject": "SARS-CoV-2"
+          },
+          {
+            "subject": "Spike Glycoprotein, Coronavirus"
+          },
+          {
+            "subject": "Whey Proteins"
+          },
+          {
+            "subject": "COVID-19 Drug Treatment"
+          },
+          {
+            "subject": "COVID-19"
+          },
+          {
+            "subject": "SARS CoV-2"
+          },
+          {
+            "subject": "cytokines"
+          },
+          {
+            "subject": "lung"
+          },
+          {
+            "subject": "methotrexate"
+          },
+          {
+            "subject": "whey protein concentrate"
+          }
+        ],
+        "titles": [
+          {
+            "title": "Inhibitory effect of whey protein concentrate on SARS-CoV-2-targeted furin activity and spike protein-ACE2 binding in methotrexate-induced lung damage."
+          }
+        ]
+      },
+      "entry_id": null,
+      "matched_principal_sets": []
+    }
+  ],
+  "subject": "pubmed:34981557"
+}
